@@ -1,0 +1,10 @@
+{
+  "name": "Provat Barta - US Standard Newspaper",
+  "description": "US Standard Newspaper layout for Provat Barta featuring authentic broadsheet typography, editorial grid, breaking news ticker with real-time Web Push alerts, interactive Daily Crossword & Sudoku puzzles, historical archive, and the Provat Partner Program.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

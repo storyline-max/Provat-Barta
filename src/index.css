@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #00204A;
+    --brand-red: #E5000C;
+    --brand-gold: #FD8B18;
+    --newspaper-bg: #fbf9f4;
+    --newspaper-border: #d6d0c4;
+    --newspaper-ink: #181512;
+  }
+
+  body {
+    font-family: 'Newsreader', 'Libre Baskerville', Georgia, serif;
+    background-color: var(--newspaper-bg);
+    color: var(--newspaper-ink);
+  }
+}
+
+.font-headline {
+  font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+}
+
+.font-bengali {
+  font-family: 'Noto Serif Bengali', 'Newsreader', serif;
+}
+
+.font-editorial {
+  font-family: 'Newsreader', 'Libre Baskerville', Georgia, serif;
+}
+
+.font-dateline {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Authentic Newspaper Drop Cap */
+.drop-cap::first-letter {
+  float: left;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 0.82;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #00204A;
+}
+
+/* Broadsheet Column Separation Lines */
+.col-divider {
+  position: relative;
+}
+
+.col-divider:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -12px;
+  bottom: 0;
+  width: 1px;
+  background-color: #e2ddd3;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+

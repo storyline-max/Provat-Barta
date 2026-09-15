@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User account document",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "users/{userId}/bookmarks": {
+      "title": "Saved Articles",
+      "description": "User saved newspaper dispatches",
+      "type": "object",
+      "properties": {
+        "articleId": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "savedAt": { "type": "string" }
+      },
+      "required": ["articleId", "title"]
+    },
+    "users/{userId}/tips": {
+      "title": "News Tips",
+      "description": "User submitted news tips and audio transcriptions",
+      "type": "object",
+      "properties": {
+        "headline": { "type": "string" },
+        "details": { "type": "string" },
+        "location": { "type": "string" },
+        "audioTranscription": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["headline", "details"]
+    }
+  }
+}
